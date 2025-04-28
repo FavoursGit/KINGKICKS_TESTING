@@ -1,0 +1,262 @@
+body {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto; /* Define grid rows */
+    min-height: 100vh; /* Ensure body fills the entire viewport height */
+    margin: 0; /* Remove default margin */
+    background-color: white; /* Set background color */
+    color: grey; /* Set default text color */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header {
+    grid-row: 1; /* Place header in the first row */
+}
+
+h1, h4, label {
+    color: white; /* Set text color for headings, paragraphs, and labels */
+}
+h2{
+    text-align: center;
+}
+
+.nav ul {
+    list-style-type: none; /* Remove bullets */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between; /* Space out the items */
+    align-items: center; /* Center items vertically */
+    background-color: #333; /* Optional: Add a background color */
+}
+
+.nav li {
+    display: inline; /* Display list items inline */
+}
+
+.nav li a {
+    display: block;
+    color: white; /* Optional: Add text color */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav li a:hover {
+    background-color: #111; /* Optional: Add a hover effect */
+}
+
+.nav .left {
+    margin-right: auto; /* Push items to the left */
+}
+
+.nav .right {
+    margin-left: auto; /* Push items to the right */
+}
+
+.nav {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nav input[type="text"] {
+    border-radius: 15px;
+    padding: 5px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+footer {
+    background-color: #333;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around; /* Distribute the footer content evenly */
+    align-items: flex-start; /* Align items to the top */
+    color: rgba(255, 255, 255, 0.473); /* Set text color to white */
+}
+
+.footer-content {
+    flex: 1; /* Allow the footer content to grow and fill the space */
+    padding: 0 20px; /* Add some padding */
+}
+
+.footer-content ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+}
+
+.footer-content h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.footer-content p {
+    text-align: center;
+    margin: 5px 0;
+}
+
+.footer-content .social-icons {
+    text-align: center;
+}
+
+.footer-content .social-icons i {
+    color: white;
+    font-size: 25px;
+    margin: 0 10px;
+}
+
+.footer-content .social-icons i:hover {
+    color: pink;
+}
+
+.list {
+    padding: 0;
+}
+
+.list li {
+    width: auto;
+    text-align: center;
+    padding: 7px;
+}
+
+.list li::before {
+    content: "";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition-duration: .5s;
+}
+
+.list li:hover::before {
+    width: 70px;
+}
+
+.social-icons {
+    text-align: center;
+    padding: 0;
+}
+
+.social-icons i {
+    color: white;
+    font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: pink;
+}
+
+.social-icons i:hover {
+    color: pink;
+}
+
+.shoe{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding:20px;
+}
+.description {
+    flex:1;
+}
+.image {
+    flex:1;
+    text-align: center;
+    margin-right:20px;
+}
+.image img{
+    width: 400px;
+    height: auto;
+}
+
+.size h2{
+    text-align: right;
+}
+.stock{
+    text-align: right;
+}
+
+.size{
+    padding-right: 25px;
+    text-align: right;
+}
+.size button{
+    transition-duration: 0.4s;
+    background-color: white;
+    border-radius: 4px;
+    border: 2px solid rgb(131, 131, 131);
+}
+.size button:hover{
+    background-color: rgb(221, 30, 157);
+    color: rgb(80, 78, 79);
+}
+
+.add{
+    text-align: right;
+    padding-right: 25px;
+}
+.add button{
+    background-color: rgb(221, 30, 157);
+    width: 170px;
+}
+.add button:hover{
+    background-color: white;
+    color: rgb(221, 30, 157);
+}
+.size-button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.size-button:hover {
+    background-color: #e0e0e0;
+}
+
+.size-button.selected {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+.size-button:disabled {
+    background-color: #f0f0f0;
+    color: #999;
+    cursor: not-allowed;
+}
+.footer-content h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: inherit; /* Ensure the color is inherited from the parent */
+    text-decoration: none; /* Remove any text decoration */
+    cursor: default; /* Change the cursor to default */
+}

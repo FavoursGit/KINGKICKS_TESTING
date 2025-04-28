@@ -1,0 +1,49 @@
+footer {
+    background-color: #333;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around; /* Distribute the footer content evenly */
+    align-items: flex-start; /* Align items to the top */
+    color: black; /* Change text color to black */
+}
+
+.footer-content {
+    flex: 1; /* Allow the footer content to grow and fill the space */
+    padding: 0 20px; /* Add some padding */
+}
+
+.footer-content ul {
+    list-style-type:circle; /* Remove bullets */
+    padding: 0;
+}
+
+.footer-content h3 {
+    text-align:right;
+    margin-bottom: 15px;
+}
+
+.footer-content p {
+    text-align: center;
+    margin: 5px 0;
+}
+
+.footer-content .social-icons {
+    text-align: center;
+}
+
+.footer-content .social-icons i {
+    color: white;
+    font-size: 25px;
+    margin: 0 10px;
+}
+
+.footer-content .social-icons i:hover {
+    color: black;
+}
+.footer-content h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: inherit; /* Ensure the color is inherited from the parent */
+    text-decoration: none; /* Remove any text decoration */
+    cursor: default; /* Change the cursor to default */
+}

@@ -1,0 +1,421 @@
+body {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto; /* Define grid rows */
+    min-height: 100vh; /* Ensure body fills the entire viewport height */
+    margin: 0; /* Remove default margin */
+    background-color: white; /* Set background color */
+    color: grey; /* Set default text color */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header {
+    grid-row: 1; /* Place header in the first row */
+}
+
+h1, h4, p, label {
+    color: white; /* Set text color for headings, paragraphs, and labels */
+}
+h2{
+    text-align: center;
+}
+
+.nav ul {
+    list-style-type: none; /* Remove bullets */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between; /* Space out the items */
+    align-items: center; /* Center items vertically */
+    background-color: #333; /* Optional: Add a background color */
+}
+
+.nav li {
+    display: inline; /* Display list items inline */
+}
+
+.nav li a {
+    display: block;
+    color: white; /* Optional: Add text color */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav li a:hover {
+    background-color: #111; /* Optional: Add a hover effect */
+}
+
+.nav .left {
+    margin-right: auto; /* Push items to the left */
+}
+
+.nav .right {
+    margin-left: auto; /* Push items to the right */
+}
+
+.nav {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Keep navbar above everything */
+}
+
+.nav input[type="text"] {
+    border-radius: 15px;
+    padding: 5px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.recently {
+    display: flex;
+    justify-content: space-around; /* Distribute images evenly */
+    align-items: center; /* Center images vertically */
+    padding: 0; /* Optional: Add some padding */
+    margin: 0;
+}
+
+.recently img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 5px; /* Reduce the margin between images */
+}
+
+.trending {
+    display: flex;
+    justify-content: space-around; /* Distribute images evenly */
+    align-items: center; /* Center images vertically */
+    padding: 0; /* Optional: Add some padding */
+    margin: 0;
+}
+
+.trending img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0px; /* Reduce the margin between images */
+}
+
+.product-box {
+    border: none; /* Remove the border */
+    padding: 10px; /* Add some padding inside the box */
+    text-align: center; /* Center the content */
+    width: 150px; /* Set a fixed width for the product box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow effect */
+    margin: 0;
+}
+
+.product-box img {
+    width: 100%; /* Make the image fill the box width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.product-box .price {
+    margin-top: 10px; /* Add some space above the price */
+    font-weight: bold; /* Make the price text bold */
+    color: #333; /* Set the color of the price text */
+}
+
+.RSearched {
+    color: grey;
+    margin-bottom: 10px; /* Adjust the value to control the space below */
+}
+
+footer {
+    background-color: #333;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around; /* Distribute the footer content evenly */
+    align-items: flex-start; /* Align items to the top */
+    color: rgba(255, 255, 255, 0.473); /* Set text color to white */
+}
+
+.footer-content {
+    flex: 1; /* Allow the footer content to grow and fill the space */
+    padding: 0 20px; /* Add some padding */
+}
+
+.footer-content ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+}
+
+.footer-content h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.footer-content p {
+    text-align: center;
+    margin: 5px 0;
+}
+
+.footer-content .social-icons {
+    text-align: center;
+}
+
+.footer-content .social-icons i {
+    color: white;
+    font-size: 25px;
+    margin: 0 10px;
+}
+
+.footer-content .social-icons i:hover {
+    color: pink;
+}
+
+.list {
+    padding: 0;
+}
+
+.list li {
+    width: auto;
+    text-align: center;
+    padding: 7px;
+}
+
+.list li::before {
+    content: "";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition-duration: .5s;
+}
+
+.list li:hover::before {
+    width: 70px;
+}
+
+.social-icons {
+    text-align: center;
+    padding: 0;
+}
+
+.social-icons i {
+    color: white;
+    font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: pink;
+}
+
+.social-icons i:hover {
+    color: pink;
+}
+
+/*nike css*/
+
+/* Body Layout */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure full viewport height */
+    margin-left: 250px; /* Space for sidebar */
+}
+
+/* Sidebar (Fixed Left) */
+.ProductSideBar {
+    width: 280px;
+    height: 100vh; /* Full height sidebar */
+    position: fixed;
+    left: 0;
+    top: 80px;
+    background-color: #111;
+    padding: 20px;
+    color: white;
+    overflow-y: auto; /* Allows scrolling if content is long */
+    
+}
+
+.ProductSideBar h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.ProductSideBar label {
+    display: block;
+    margin-top: 10px;
+}
+
+.ProductSideBar select,
+.ProductSideBar input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+}
+
+.ProductSideBar a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #222;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.ProductSideBar a:hover {
+    background-color: #575757;
+}
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+  }
+  
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+/* Main Content (Avoid Sidebar Overlap) */
+.MainContent {
+    flex-grow: 1; /* Pushes footer down */
+    padding: 20px;
+}
+
+/* Fixed Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px; 
+    background-color: #333;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+  }
+  
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+  .product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; /* Adjust the gap between items as needed */
+}
+
+.product-box {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd; /* Optional: Add border for better visibility */
+}
+
+.product-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.MainContent {
+    flex-grow: 1; /* Pushes footer down */
+    padding: 20px;
+    padding-top: 100px; /* Adjust this value to match the height of your navbar */
+}
+
+.footer-content h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: inherit; /* Ensure the color is inherited from the parent */
+    text-decoration: none; /* Remove any text decoration */
+    cursor: default; /* Change the cursor to default */
+}
